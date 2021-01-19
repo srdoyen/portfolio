@@ -2,16 +2,17 @@ import React from 'react';
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../css/styles.css";
+import { Link } from "react-router-dom";
 
 function HeaderComponent(props) {
     return(
         <>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Scott R. Doyen</Navbar.Brand>
+        <Navbar.Brand href="./home">Scott R. Doyen</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link href="#pricing">About Me</Nav.Link>
+                <Nav.Link href="/about">About Me</Nav.Link>
                 <NavDropdown title="Portfolio" id="collasible-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Food Truck Finder</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Calorie Tracker</NavDropdown.Item>
